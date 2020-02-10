@@ -4,7 +4,7 @@
   "description": "Transforms Azure Cloud Service cscfg files",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && mocha ./buildAndReleaseTask/tests/_suite.js",
+    "test": "tsc && mocha ./tests/_suite.js",
     "package": "tsc && tfx extension create --manifest-globs vss-extension.json"
   },
   "keywords": [

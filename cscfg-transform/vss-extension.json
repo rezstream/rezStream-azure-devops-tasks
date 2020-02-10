@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "cscfg-transform",
   "name": "Azure Cloud Services Config Variable Transform",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "publisher": "rezStream",
   "targets": [
     {
@@ -14,22 +14,22 @@
     "Azure Pipelines"
   ],
   "icons": {
-    "default": "images/extension-icon.png"
+    "default": "images/icon.png"
   },
   "files": [
     {
-      "path": "buildAndReleaseTask"
+      "path": "./"
     }
   ],
   "contributions": [
     {
-      "id": "custom-build-release-task",
+      "id": "cscfg-transform",
       "type": "ms.vss-distributed-task.task",
       "targets": [
         "ms.vss-distributed-task.tasks"
       ],
       "properties": {
-        "name": "buildAndReleaseTask"
+        "name": "cscfg-transform"
       }
     }
   ]
