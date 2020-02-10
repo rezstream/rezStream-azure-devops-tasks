@@ -1,0 +1,24 @@
+{
+  "name": "cscfg-transform-task",
+  "version": "0.0.1",
+  "description": "Transforms Azure Cloud Service cscfg files",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && mocha ./buildAndReleaseTask/tests/_suite.js",
+    "package": "tsc && tfx extension create --manifest-globs vss-extension.json"
+  },
+  "keywords": [
+    "cscfg"
+  ],
+  "author": "rezStream",
+  "license": "MIT",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.9.3"
+  },
+  "devDependencies": {
+    "@types/mocha": "^7.0.1",
+    "@types/node": "^13.7.0",
+    "@types/q": "^1.5.2",
+    "sync-request": "^6.1.0"
+  }
+}
