@@ -1,4 +1,4 @@
-import tl = require('azure-pipelines-task-lib');
+import tl = require('azure-pipelines-task-lib/task');
 import { promises as fsPromises } from 'fs';
 import { DOMParser, XMLSerializer } from 'xmldom';
 
