@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "tsc && mocha ./tests/_suite.js",
-    "package": "tsc && tfx extension create --manifest-globs vss-extension.json"
+    "package": "tsc && tfx extension create --manifest-globs cscfg-transform-extension.json"
   },
   "keywords": [
     "cscfg"

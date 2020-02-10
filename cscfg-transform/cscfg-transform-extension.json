@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "cscfg-transform",
   "name": "Azure Cloud Services Config Variable Transform",
-  "version": "0.2.0",
+  "version": "0.2.3",
   "publisher": "rezStream",
   "targets": [
     {
@@ -17,9 +17,7 @@
     "default": "images/icon.png"
   },
   "files": [
-    {
-      "path": "./"
-    }
+    { "path": "./", "packagePath": "cscfg-transform\\" }
   ],
   "contributions": [
     {
