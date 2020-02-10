@@ -13,12 +13,14 @@
   "author": "rezStream",
   "license": "MIT",
   "dependencies": {
-    "azure-pipelines-task-lib": "^2.9.3"
+    "azure-pipelines-task-lib": "^2.9.3",
+    "xmldom": "^0.2.1"
   },
   "devDependencies": {
     "@types/mocha": "^7.0.1",
     "@types/node": "^13.7.0",
     "@types/q": "^1.5.2",
+    "@types/xmldom": "^0.1.29",
     "sync-request": "^6.1.0"
   }
 }

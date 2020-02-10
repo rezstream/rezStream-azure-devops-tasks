@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "cscfg-transform",
-  "name": "Azure Cloud Services Config Transform",
+  "name": "Azure Cloud Services Config Variable Transform",
   "version": "0.1.0",
   "publisher": "rezStream",
   "targets": [
@@ -9,7 +9,7 @@
       "id": "Microsoft.VisualStudio.Services"
     }
   ],
-  "description": "Transforms Azure Cloud Service cscfg files.",
+  "description": "Transforms Azure Cloud Service cscfg variables.",
   "categories": [
     "Azure Pipelines"
   ],

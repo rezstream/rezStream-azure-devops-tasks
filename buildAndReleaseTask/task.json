@@ -2,30 +2,34 @@
   "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
   "id": "ed1c80dd-0444-415a-9a79-4cbd0251e8f2",
   "name": "cscfg-transform",
-  "friendlyName": "Azure Cloud Services Config Transform",
-  "description": "Transforms Azure Cloud Service cscfg files.",
+  "friendlyName": "Azure Cloud Services Config Variable Transform",
+  "description": "Transforms Azure Cloud Service cscfg variables.",
   "helpMarkDown": "",
   "category": "Utility",
   "author": "rezStream",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
   "version": {
-      "Major": 0,
-      "Minor": 1,
-      "Patch": 0
+    "Major": 0,
+    "Minor": 1,
+    "Patch": 0
   },
-  "instanceNameFormat": "Echo $(samplestring)",
+  "instanceNameFormat": "Transform cscfg $(targetFilePath)",
   "inputs": [
-      {
-          "name": "samplestring",
-          "type": "string",
-          "label": "Sample String",
-          "defaultValue": "",
-          "required": true,
-          "helpMarkDown": "A sample string"
-      }
+    {
+      "name": "targetFilePath",
+      "type": "filePath",
+      "label": "File path",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "The cscfg file to apply variable transforms to"
+    }
   ],
   "execution": {
-      "Node10": {
-          "target": "index.js"
-      }
+    "Node10": {
+      "target": "index.js"
+    }
   }
 }
