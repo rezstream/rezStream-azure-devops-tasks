@@ -1,7 +1,7 @@
 {
-  "name": "cscfg-transform-task",
-  "version": "0.0.1",
-  "description": "Transforms Azure Cloud Service cscfg files",
+  "name": "cscfg-vnetsite",
+  "version": "0.1.0",
+  "description": "Overrides Azure Cloud Service cscfg VirtualNetworkSite",
   "main": "index.js",
   "scripts": {
     "test": "tsc && mocha ./tests/_suite.js"

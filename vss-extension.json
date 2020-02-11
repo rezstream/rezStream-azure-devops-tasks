@@ -1,15 +1,15 @@
 {
   "manifestVersion": 1,
   "id": "cscfg-transform",
-  "name": "Azure Cloud Services Config Variable Transform",
-  "version": "0.2.3",
+  "name": "Azure Cloud Service Tools",
+  "version": "0.3.1",
   "publisher": "rezStream",
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
     }
   ],
-  "description": "Transforms Azure Cloud Service cscfg variables.",
+  "description": "Utilities for working with Cloud Services.",
   "categories": [
     "Azure Pipelines"
   ],
@@ -17,7 +17,8 @@
     "default": "images/icon.png"
   },
   "files": [
-    { "path": "./", "packagePath": "cscfg-transform\\" }
+    { "path": "cscfg-transform" },
+    { "path": "cscfg-vnetsite" }
   ],
   "contributions": [
     {
@@ -28,6 +29,16 @@
       ],
       "properties": {
         "name": "cscfg-transform"
+      }
+    },
+    {
+      "id": "cscfg-vnetsite",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "cscfg-vnetsite"
       }
     }
   ]

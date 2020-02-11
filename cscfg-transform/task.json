@@ -16,7 +16,7 @@
     "Minor": 2,
     "Patch": 3
   },
-  "instanceNameFormat": "Transform cscfg $(targetFilePath)",
+  "instanceNameFormat": "Transform CS Config Variables $(targetFilePath)",
   "inputs": [
     {
       "name": "targetFilePath",

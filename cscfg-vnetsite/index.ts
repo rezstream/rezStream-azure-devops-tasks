@@ -10,6 +10,12 @@ async function run() {
       return;
     }
 
+    const overrideName: string | undefined = tl.getInput('overrideNetworkSiteName', true);
+    if (overrideName == null) {
+      tl.setResult(tl.TaskResult.Failed, 'An override name is required');
+      return;
+    }
+
     let fileMutated = false;
 
     const originalContents = await fsPromises.readFile(targetFilePath, 'utf8');
@@ -21,40 +27,32 @@ async function run() {
       return;
     }
 
-    let roleNode = Array.from(doc.documentElement.childNodes).filter(n => n.nodeType === 1 && n.nodeName === 'Role')[0];
-    if (!roleNode) {
-      tl.setResult(tl.TaskResult.Failed, 'Config file missing Role element');
-      return;
+    let networkNode = doc.documentElement.getElementsByTagName('NetworkConfiguration')[0];
+    if (!networkNode) {
+      networkNode = doc.createElement('NetworkConfiguration');
+      doc.documentElement.appendChild(networkNode);
+      fileMutated = true;
     }
 
-    let configSettingsNode = Array.from(roleNode.childNodes).filter(n => n.nodeType === 1 && n.nodeName === 'ConfigurationSettings')[0];
-    if (!configSettingsNode) {
-      tl.warning("Failed to find a ConfigurationSettings section to update");
-      return;
+    let virtualNetworkSite = networkNode.getElementsByTagName('VirtualNetworkSite')[0];
+    if (!virtualNetworkSite) {
+      virtualNetworkSite = doc.createElement('VirtualNetworkSite');
+      networkNode.appendChild(virtualNetworkSite);
+      fileMutated = true;
     }
 
-    Array.from(configSettingsNode.childNodes).filter(n => n.nodeType === 1 && n.nodeName === 'Setting').forEach(settingsNode => {
-      let settingsElement = <Element>settingsNode;
-      const settingName = settingsElement.getAttribute('name');
-      if (!settingName) {
-        return;
-      }
-
-      let overrideValue = tl.getVariable(settingName);
-
-      if (overrideValue != null) {
-        tl.debug(`Override found for ${settingName}`);
-        settingsElement.setAttribute('value', overrideValue);
-        fileMutated = true;
-      }
-    });
+    const originalName = virtualNetworkSite.getAttribute('name');
+    if (originalName !== overrideName) {
+      virtualNetworkSite.setAttribute('name', overrideName);
+      fileMutated = true;
+    }
 
     if (fileMutated) {
       const newContents = new XMLSerializer().serializeToString(doc);
       await fsPromises.writeFile(targetFilePath, newContents);
     }
     else {
-      tl.warning("No variable updates were applied to the file.");
+      tl.warning("No updates were applied to the file.");
     }
 
   }
