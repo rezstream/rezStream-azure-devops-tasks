@@ -1,15 +1,15 @@
 {
   "manifestVersion": 1,
-  "id": "cscfg-transform",
-  "name": "Azure Cloud Service Tools",
-  "version": "0.3.1",
+  "id": "cscfg-vnetsite",
+  "name": "Azure Cloud Services Config VirtualNetworkSite Override",
+  "version": "0.4.1",
   "publisher": "rezStream",
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
     }
   ],
-  "description": "Utilities for working with Cloud Services.",
+  "description": "Overrides Azure Cloud Service cscfg VirtualNetworkSite.",
   "categories": [
     "Azure Pipelines"
   ],
@@ -17,20 +17,11 @@
     "default": "images/icon.png"
   },
   "files": [
-    { "path": "cscfg-transform" },
-    { "path": "cscfg-vnetsite" }
+    {
+      "path": "cscfg-vnetsite"
+    }
   ],
   "contributions": [
-    {
-      "id": "cscfg-transform",
-      "type": "ms.vss-distributed-task.task",
-      "targets": [
-        "ms.vss-distributed-task.tasks"
-      ],
-      "properties": {
-        "name": "cscfg-transform"
-      }
-    },
     {
       "id": "cscfg-vnetsite",
       "type": "ms.vss-distributed-task.task",

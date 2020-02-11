@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
-  "id": "ed1c80dd-0444-415a-9a79-4cbd0251e8f2",
+  "id": "68e07033-2064-4c4f-97bd-dba59f06a539",
   "name": "cscfg-vnetsite",
   "friendlyName": "Azure Cloud Services Config VirtualNetworkSite Override",
   "description": "Overrides Azure Cloud Service cscfg VirtualNetworkSite.",
@@ -14,7 +14,7 @@
   "version": {
     "Major": 0,
     "Minor": 1,
-    "Patch": 0
+    "Patch": 1
   },
   "instanceNameFormat": "Transform CS Config VirtualNetworkSite $(targetFilePath)",
   "inputs": [

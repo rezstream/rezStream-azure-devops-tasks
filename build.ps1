@@ -1,11 +1,11 @@
-Push-Location .\cscfg-transform
+Push-Location .\cscfg-settings
 npm install
 tsc
 Pop-Location
+tfx extension create --manifest-globs .\cscfg-settings-extension.json
 
 Push-Location .\cscfg-vnetsite
 npm install
 tsc
 Pop-Location
-
-tfx extension create --manifest-globs vss-extension.json
+tfx extension create --manifest-globs .\cscfg-vnetsite-extension.json

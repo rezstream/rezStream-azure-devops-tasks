@@ -1,0 +1,36 @@
+{
+  "manifestVersion": 1,
+  "id": "cscfg-settings",
+  "name": "Update Azure Cloud Service CS Config Settings",
+  "version": "0.4.1",
+  "publisher": "rezStream",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "Updates Azure Cloud Service CS Config Settings.",
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "icons": {
+    "default": "images/icon.png"
+  },
+  "files": [
+    {
+      "path": "cscfg-settings"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "cscfg-settings",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "cscfg-settings"
+      }
+    }
+  ]
+}
