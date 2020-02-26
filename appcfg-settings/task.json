@@ -1,9 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
-  "id": "64fcfa03-9fdf-43a5-87f5-b038f78d5580",
-  "name": "cscfg-settings",
-  "friendlyName": "Update Azure Cloud Services Config Settings",
-  "description": "Updates Azure Cloud Service CS Config Settings.",
+  "id": "b9e73261-8b50-4e5b-8064-45ea8d5521c1",
+  "name": "appcfg-settings",
+  "friendlyName": "Update .NET XML Config Settings",
+  "description": "Updates .NET app.config and web.config settings.",
   "helpMarkDown": "",
   "category": "Utility",
   "author": "rezStream",
@@ -13,10 +13,10 @@
   ],
   "version": {
     "Major": 0,
-    "Minor": 5,
+    "Minor": 1,
     "Patch": 0
   },
-  "instanceNameFormat": "Update CS Config Settings $(targetFilePath)",
+  "instanceNameFormat": "Update XML Config Settings $(targetFilePath)",
   "inputs": [
     {
       "name": "targetFilePath",
@@ -24,7 +24,7 @@
       "label": "File path",
       "defaultValue": "",
       "required": true,
-      "helpMarkDown": "The cscfg file needing settings updates"
+      "helpMarkDown": "The config file needing settings updates"
     }
   ],
   "execution": {

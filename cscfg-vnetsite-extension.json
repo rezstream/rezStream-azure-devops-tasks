@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "cscfg-vnetsite",
   "name": "Azure Cloud Services Config VirtualNetworkSite Override",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "publisher": "rezStream",
   "targets": [
     {

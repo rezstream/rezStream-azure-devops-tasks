@@ -1,0 +1,25 @@
+{
+  "name": "appcfg-settings",
+  "version": "0.0.1",
+  "description": "Updates .NET app.config and web.config settings",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && mocha ./tests/_suite.js"
+  },
+  "keywords": [
+    "app.config"
+  ],
+  "author": "rezStream",
+  "license": "MIT",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.9.3",
+    "xmldom": "^0.2.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^7.0.1",
+    "@types/node": "^13.7.0",
+    "@types/q": "^1.5.2",
+    "@types/xmldom": "^0.1.29",
+    "sync-request": "^6.1.0"
+  }
+}
