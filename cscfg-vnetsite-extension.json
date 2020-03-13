@@ -2,8 +2,11 @@
   "manifestVersion": 1,
   "id": "cscfg-vnetsite",
   "name": "Azure Cloud Services Config VirtualNetworkSite Override",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "publisher": "rezStream",
+  "galleryFlags": [
+    "Public"
+  ],
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
@@ -13,6 +16,23 @@
   "categories": [
     "Azure Pipelines"
   ],
+  "tags": [
+    "cscfg",
+    "cloud service",
+    "VirtualNetworkSite"
+  ],
+  "content": {
+    "details": {
+      "path": "cscfg-vnetsite/overview.md"
+    },
+    "license": {
+      "path": "LICENSE"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/RezStream/rezStream-azure-devops-tasks"
+  },
   "icons": {
     "default": "images/icon.png"
   },

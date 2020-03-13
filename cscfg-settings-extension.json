@@ -1,18 +1,39 @@
 {
   "manifestVersion": 1,
   "id": "cscfg-settings",
-  "name": "Update Azure Cloud Service CS Config Settings",
-  "version": "0.5.0",
+  "name": "Update Azure Cloud Service Config Settings",
+  "version": "1.0.0",
   "publisher": "rezStream",
+  "galleryFlags": [
+    "Public"
+  ],
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
     }
   ],
-  "description": "Updates Azure Cloud Service CS Config Settings.",
+  "description": "Updates Azure Cloud Service config settings from variables.",
   "categories": [
     "Azure Pipelines"
   ],
+  "tags": [
+    "cscfg",
+    "cloud service",
+    "variable",
+    "replace"
+  ],
+  "content": {
+    "details": {
+      "path": "cscfg-settings/overview.md"
+    },
+    "license": {
+      "path": "LICENSE"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/RezStream/rezStream-azure-devops-tasks"
+  },
   "icons": {
     "default": "images/icon.png"
   },

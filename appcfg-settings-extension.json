@@ -2,17 +2,38 @@
   "manifestVersion": 1,
   "id": "appcfg-settings",
   "name": "Update .NET XML Config Settings",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "publisher": "rezStream",
+  "galleryFlags": [
+    "Public"
+  ],
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
     }
   ],
-  "description": "Updates .NET app.config and web.config settings.",
+  "description": "Updates .NET app.config and web.config settings from variables.",
   "categories": [
     "Azure Pipelines"
   ],
+  "tags": [
+    "app.config",
+    "web.config",
+    "variable",
+    "replace"
+  ],
+  "content": {
+    "details": {
+      "path": "appcfg-settings/overview.md"
+    },
+    "license": {
+      "path": "LICENSE"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/RezStream/rezStream-azure-devops-tasks"
+  },
   "icons": {
     "default": "images/icon.png"
   },

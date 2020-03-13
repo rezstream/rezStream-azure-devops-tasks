@@ -1,4 +1,4 @@
-A collection of simple Azure DevOps tasks for modifying configuration files.
+A collection of simple Azure DevOps tasks used by us that we are sharing.
 
 See the Azure DevOps documentation to understand how to develop and test these extensions.
 

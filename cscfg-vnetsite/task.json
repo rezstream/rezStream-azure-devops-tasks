@@ -12,8 +12,8 @@
     "Release"
   ],
   "version": {
-    "Major": 0,
-    "Minor": 5,
+    "Major": 1,
+    "Minor": 0,
     "Patch": 0
   },
   "instanceNameFormat": "Transform CS Config VirtualNetworkSite $(targetFilePath)",
